@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors     = [ 'Topbit Du' ]
   spec.email       = [ 'topbit.du@gmail.com' ]
   spec.homepage    = 'https://github.com/topbitdu/unidom-geo'
-  spec.summary     = 'The Geo domain model engine includes Region, Town, and Location models.'
+  spec.summary     = 'Unidom Geo Domain Model Engine 地理领域模型引擎'
   spec.description = 'Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Geo domain model engine includes Region, Town, and Location models. Unidom (统一领域对象模型)是一系列的领域模型引擎。地理领域模型引擎包括行政区划、乡镇和街道地址的模型。'
   spec.license     = 'MIT'
 
