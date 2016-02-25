@@ -12,4 +12,6 @@ class Unidom::Geo::Location < ActiveRecord::Base
   scope :located_is,  ->(located)  { where located:  located  }
   scope :located_by,  ->(locator)  { where locator:  locator  }
 
+  include Unidom::Common::Concerns::ModelExtension
+
 end
