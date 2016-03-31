@@ -9,4 +9,4 @@
 2. Improved the Locating model to include the Model Extension concern
 
 ## v0.3
-1. Improved the Ruby Gem Specification to depend on unidom-common v0.5
+1. Improved the Ruby Gem Specification to depend on unidom-common v0.7
