@@ -20,7 +20,6 @@ class CreateUnidomLocations < ActiveRecord::Migration
 
       t.column :accuarcy_code, 'char(1)', null: false, default: 'N'
 
-      t.string   :slug,             null: false, default: nil, limit: 200
       t.column   :state, 'char(1)', null: false, default: 'C'
       t.datetime :opened_at,        null: false, default: ::Time.utc(1970)
       t.datetime :closed_at,        null: false, default: ::Time.utc(3000)
@@ -38,8 +37,7 @@ class CreateUnidomLocations < ActiveRecord::Migration
     add_index :unidom_locations, :minimum_longitude
     add_index :unidom_locations, :maximum_latitude
     add_index :unidom_locations, :maximum_longitude
-    add_index :unidom_locations, :slug, unique: true
-    # add_index :unidom_locations, [ :postal_address, :region_id, :region_type ], unique: true
+    add_index :unidom_locations, [ :postal_address, :region_id, :region_type ], unique: true, name: 'index_unidom_locations_on_postal_address_and_region'
 
   end
 
