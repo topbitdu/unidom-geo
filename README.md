@@ -24,4 +24,7 @@ The migration versions start with 200104.
 ## Call the Model:
 ```ruby
 Unidom::Geo::Location.valid_at.alive.first.region
+
+active_locatings = location.locatings.valid_at.alive
+Unidom::Geo::Locating.locate! location, shop
 ```
