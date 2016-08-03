@@ -14,7 +14,7 @@ class Unidom::Geo::Locating < ActiveRecord::Base
   scope :located_is,  ->(located)  { where located:  located  }
   scope :located_by,  ->(locator)  { where locator:  locator  }
 
-  def self.locate!(location, located, locator = nil, opened_at = Time.now)
+  def self.locate!(location: nil, located: nil, locator: nil, opened_at: Time.now)
     attributes = { opened_at: opened_at }
     if locator.present?
       attributes[:locator] = locator

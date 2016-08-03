@@ -24,4 +24,8 @@ class Unidom::Geo::Location < ActiveRecord::Base
   scope :region_is,         ->(region)         { where region:         region         }
   scope :postal_address_is, ->(postal_address) { where postal_address: postal_address }
 
+  def locate!(located, by: nil, at: Time.now)
+    locatings.create! located: located, locator: by, opened_at: at
+  end
+
 end

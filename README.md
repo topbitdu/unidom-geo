@@ -26,5 +26,9 @@ The migration versions start with 200104.
 Unidom::Geo::Location.valid_at.alive.first.region
 
 active_locatings = location.locatings.valid_at.alive
-Unidom::Geo::Locating.locate! location, shop
+
+# Locate: associate a shop, an estate, or a facility with a location
+location.locate! shop, by: person
+# or
+Unidom::Geo::Locating.locate! location: location, located: shop
 ```
