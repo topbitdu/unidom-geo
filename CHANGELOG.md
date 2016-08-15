@@ -17,3 +17,6 @@
 ## v1.0
 1. Improved the Locating model to support the Keyword Arguments
 2. Improved the Location model to add the #locate! method
+
+## v1.0.1
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0

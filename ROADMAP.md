@@ -18,10 +18,16 @@
 1. Improve the Locating model to support the Keyword Arguments
 2. Improve the Location model to add the #locate! method
 
+## v1.0.1
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
+
 ## v1.1
 1. As Located concern
-2. As Locator concern
+2. As Region concern
 
 ## v1.2
 1. Improve the As Located concern to add the #is_located! method
+
+## v1.3
+1. As Locator concern
 2. Improve the As Locator concern to add the #locate! method
