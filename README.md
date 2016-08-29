@@ -32,3 +32,19 @@ location.locate! shop, by: person
 # or
 Unidom::Geo::Locating.locate! location: location, located: shop
 ```
+
+## Include the Concerns:
+```ruby
+include Unidom::Geo::Concerns::AsLocated
+include Unidom::Geo::Concerns::AsRegion
+```
+
+### As Located concern
+The As Located concern do the following tasks for the includer automatically:  
+1. Define the has_many :locatings macro as: ``has_many :locatings, class_name: 'Unidom::Geo::Locating', as: :located``
+2. Define the has_many :locations macro as: ``has_many :locations, through: :locatings, source: :location``
+
+### As Region concern
+The As Region concern do the following tasks for the includer automatically:  
+1. Define the has_many :locations macro as: ``has_many :locations, class_name: 'Unidom::Geo::Location'``
+2. Define the has_many :locatings macro as: ``has_many :locatings, through: :locations, source: :locatings``
