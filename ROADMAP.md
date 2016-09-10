@@ -27,7 +27,9 @@
 
 ## v1.2
 1. Improve the As Located concern to add the #is_located! method
+2. Improve the Location model to add the #locate? method
 
 ## v1.3
-1. As Locator concern
-2. Improve the As Locator concern to add the #locate! method
+1. Improve the As Located concern to add the #is_located? method
+2. As Locator concern
+3. Improve the As Locator concern to add the #locate! method

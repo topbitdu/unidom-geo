@@ -31,6 +31,9 @@ active_locatings = location.locatings.valid_at.alive
 location.locate! shop, by: person
 # or
 Unidom::Geo::Locating.locate! location: location, located: shop
+
+# Determine whether a shop was located to a given location at a given time.
+location.locate? shop, at: Time.now
 ```
 
 ## Include the Concerns:
@@ -43,6 +46,7 @@ include Unidom::Geo::Concerns::AsRegion
 The As Located concern do the following tasks for the includer automatically:  
 1. Define the has_many :locatings macro as: ``has_many :locatings, class_name: 'Unidom::Geo::Locating', as: :located``
 2. Define the has_many :locations macro as: ``has_many :locations, through: :locatings, source: :location``
+3. Define the #is_located! method as: ``is_located!(to: nil, by: nil, at: Time.now)``
 
 ### As Region concern
 The As Region concern do the following tasks for the includer automatically:  

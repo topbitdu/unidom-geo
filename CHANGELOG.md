@@ -24,3 +24,7 @@
 ## v1.1
 1. As Located concern
 2. As Region concern
+
+## v1.2
+1. Improved the As Located concern to add the #is_located! method
+2. Improved the Location model to add the #locate? method
