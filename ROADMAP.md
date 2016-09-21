@@ -32,4 +32,3 @@
 ## v1.3
 1. Improve the As Located concern to add the #is_located? method
 2. As Locator concern
-3. Improve the As Locator concern to add the #locate! method
