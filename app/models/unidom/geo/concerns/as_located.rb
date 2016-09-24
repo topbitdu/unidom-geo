@@ -11,6 +11,10 @@ module Unidom::Geo::Concerns::AsLocated
       locatings.location_is(to).valid_at(now: at).alive.first_or_create! locator: by, opened_at: at
     end
 
+    def is_located?(to: nil, at: Time.now)
+      locatings.location_is(to).valid_at(now: at).alive.exists?
+    end
+
   end
 
   module ClassMethods
