@@ -7,15 +7,9 @@ module Unidom::Geo::Concerns::AsLocator
     has_many :locatings, class_name: 'Unidom::Geo::Locating', as:     :locator
     has_many :locations, through:    :locatings,              source: :location
 
-=begin
-    def locate!(to: nil, by: nil, at: Time.now)
-      locatings.location_is(to).valid_at(now: at).alive.first_or_create! locator: by, opened_at: at
+    def locate!(it, to: nil, at: Time.now)
+      locatings.location_is(to).located_is(it).valid_at(now: at).alive.first_or_create! opened_at: at
     end
-
-    def locate?(to: nil, at: Time.now)
-      locatings.location_is(to).valid_at(now: at).alive.exists?
-    end
-=end
 
   end
 
