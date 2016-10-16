@@ -61,7 +61,7 @@ include Unidom::Geo::Concerns::AsRegion
 
 ### As Located concern
 
-The As Located concern do the following tasks for the includer automatically:
+The As Located concern do the following tasks for the includer automatically:  
 1. Define the has_many :locatings macro as: ``has_many :locatings, class_name: 'Unidom::Geo::Locating', as: :located``  
 2. Define the has_many :locations macro as: ``has_many :locations, through: :locatings, source: :location``  
 3. Define the #is_located! method as: ``is_located!(to: nil, by: nil, at: Time.now)``  
@@ -69,13 +69,13 @@ The As Located concern do the following tasks for the includer automatically:
 
 ### As Locator concern
 
-The As Locator concern do the following tasks for the includer automatically:
+The As Locator concern do the following tasks for the includer automatically:  
 1. Define the has_many :locatings macro as: ``has_many :locatings, class_name: 'Unidom::Geo::Locating', as: :locator``  
 2. Define the has_many :locations macro as: ``has_many :locations, through: :locatings, source: :location``  
 3. Define the #locate! method as: ``locate!(it, to: nil, at: Time.now)``
 
 ### As Region concern
 
-The As Region concern do the following tasks for the includer automatically:
+The As Region concern do the following tasks for the includer automatically:  
 1. Define the has_many :locations macro as: ``has_many :locations, class_name: 'Unidom::Geo::Location'``  
 2. Define the has_many :locatings macro as: ``has_many :locatings, through: :locations, source: :locatings``
