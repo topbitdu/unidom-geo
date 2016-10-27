@@ -1,6 +1,6 @@
 # Locating 是地理定位，表示地理位置和被定位物体之间的关联。
 
-class Unidom::Geo::Locating < ActiveRecord::Base
+class Unidom::Geo::Locating < Unidom::Geo::ApplicationRecord
 
   self.table_name = 'unidom_locatings'
 
