@@ -1,6 +1,6 @@
 # Location 是地理位置。具体对应到某一个街道地址。
 
-class Unidom::Geo::Location < ActiveRecord::Base
+class Unidom::Geo::Location < Unidom::Geo::ApplicationRecord
 
   self.table_name = 'unidom_locations'
 
