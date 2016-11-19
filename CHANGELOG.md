@@ -1,7 +1,7 @@
 # Unidom Geo Change Log 地理领域模型引擎变更日志
 
 ## v0.1
-1. Location model & migration
+1. Location model & migration (20010401000000)
 2. Locating model & migration
 
 ## v0.2
