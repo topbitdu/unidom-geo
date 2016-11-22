@@ -2,7 +2,7 @@
 
 ## v0.1
 1. Location model & migration (20010401000000)
-2. Locating model & migration
+2. Locating model & migration (20010402000000)
 
 ## v0.2
 1. Improved the Location model to include the Model Extension concern
