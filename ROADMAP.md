@@ -11,7 +11,7 @@
 ## v0.3
 1. Improve the Location model to add the ``has_may :locatings`` macro
 2. Improve the Locating model for the class name
-3. Improve the Locating model to add the #locate! method
+3. Improve the Locating model to add the #``locate!`` method
 4. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v1.0
