@@ -6,7 +6,7 @@
 
 ## v0.2
 1. Improve the Location model to include the Model Extension concern
-2. Improved the Locating model to include the Model Extension concern
+2. Improve the Locating model to include the Model Extension concern
 
 ## v0.3
 1. Improve the Location model to add the ``has_may :locatings`` macro
