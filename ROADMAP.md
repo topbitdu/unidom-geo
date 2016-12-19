@@ -30,7 +30,7 @@
 2. Improve the Location model to add the #``locate?`` method
 
 ## v1.3
-1. Improve the As Located concern to add the #is_located? method
+1. Improve the As Located concern to add the #``is_located?`` method
 2. As Locator concern
 
 ## v1.4
