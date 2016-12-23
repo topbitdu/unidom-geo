@@ -34,7 +34,7 @@
 2. As Locator concern
 
 ## v1.4
-1. Improved the As Locator concern to add the #locate! method
+1. Improved the As Locator concern to add the #``locate!`` method
 
 ## v1.4.1
 1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
