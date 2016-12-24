@@ -1,3 +1,4 @@
+##
 # Location 是地理位置。具体对应到某一个街道地址。
 
 class Unidom::Geo::Location < Unidom::Geo::ApplicationRecord
@@ -24,10 +25,16 @@ class Unidom::Geo::Location < Unidom::Geo::ApplicationRecord
   scope :region_is,         ->(region)         { where region:         region         }
   scope :postal_address_is, ->(postal_address) { where postal_address: postal_address }
 
+  ##
+  # 将当前位置与地标关联起来。如：
+  # location.locate! shop, by: current_person
   def locate!(located, by: nil, at: Time.now)
     locatings.located_is(located).valid_at(now: at).alive.first_or_create! locator: by, opened_at: at
   end
 
+  ##
+  # 判断当前位置与地标之间，是否有有效的关联。如：
+  # location.locate? shop
   def locate?(located, at: Time.now)
     locatings.located_is(located).valid_at(now: at).alive.exists?
   end
