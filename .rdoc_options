@@ -1,0 +1,22 @@
+--- !ruby/object:RDoc::Options
+--- http://rdoc.rubyforge.org/RDoc/Options.html#label-Saved+Options
+encoding: UTF-8
+static_path: []
+rdoc_include:
+- "."
+exclude: 
+hyperlink_all: false
+line_numbers: true
+locale: 
+locale_dir: locale
+locale_name: 
+main_page: 
+markup: markdown
+output_decoration: true
+page_dir: 
+show_hash: false
+tab_width: 8
+template_stylesheets: []
+title: 
+visibility: :protected
+webcvs: 
