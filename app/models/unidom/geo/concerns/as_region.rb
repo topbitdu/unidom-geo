@@ -1,5 +1,6 @@
 ##
 # As Region 是为行政区划提供的领域逻辑关注点。
+
 module Unidom::Geo::Concerns::AsRegion
 
   extend ActiveSupport::Concern
