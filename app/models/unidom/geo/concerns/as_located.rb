@@ -1,3 +1,6 @@
+##
+# As Located 是为地标提供的领域逻辑关注点。
+
 module Unidom::Geo::Concerns::AsLocated
 
   extend ActiveSupport::Concern
