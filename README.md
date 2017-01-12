@@ -1,6 +1,8 @@
 # Unidom Geo 地理领域模型引擎
 
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/gems/unidom-geo/frames)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
+
 [![Gem Version](https://badge.fury.io/rb/unidom-geo.svg)](https://badge.fury.io/rb/unidom-geo)
 [![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-geo.svg)](https://gemnasium.com/github.com/topbitdu/unidom-geo)
 
@@ -61,21 +63,21 @@ include Unidom::Geo::Concerns::AsRegion
 
 ### As Located concern
 
-The As Located concern do the following tasks for the includer automatically:  
-1. Define the has_many :locatings macro as: ``has_many :locatings, class_name: 'Unidom::Geo::Locating', as: :located``  
-2. Define the has_many :locations macro as: ``has_many :locations, through: :locatings, source: :location``  
-3. Define the #is_located! method as: ``is_located!(to: nil, by: nil, at: Time.now)``  
+The As Located concern do the following tasks for the includer automatically:
+1. Define the has_many :locatings macro as: ``has_many :locatings, class_name: 'Unidom::Geo::Locating', as: :located``
+2. Define the has_many :locations macro as: ``has_many :locations, through: :locatings, source: :location``
+3. Define the #is_located! method as: ``is_located!(to: nil, by: nil, at: Time.now)``
 4. Define the #is_located? method as: ``is_located?(to: nil, at: Time.now)``
 
 ### As Locator concern
 
-The As Locator concern do the following tasks for the includer automatically:  
-1. Define the has_many :locatings macro as: ``has_many :locatings, class_name: 'Unidom::Geo::Locating', as: :locator``  
-2. Define the has_many :locations macro as: ``has_many :locations, through: :locatings, source: :location``  
+The As Locator concern do the following tasks for the includer automatically:
+1. Define the has_many :locatings macro as: ``has_many :locatings, class_name: 'Unidom::Geo::Locating', as: :locator``
+2. Define the has_many :locations macro as: ``has_many :locations, through: :locatings, source: :location``
 3. Define the #locate! method as: ``locate!(it, to: nil, at: Time.now)``
 
 ### As Region concern
 
-The As Region concern do the following tasks for the includer automatically:  
-1. Define the has_many :locations macro as: ``has_many :locations, class_name: 'Unidom::Geo::Location'``  
+The As Region concern do the following tasks for the includer automatically:
+1. Define the has_many :locations macro as: ``has_many :locations, class_name: 'Unidom::Geo::Location'``
 2. Define the has_many :locatings macro as: ``has_many :locatings, through: :locations, source: :locatings``
