@@ -1,3 +1,6 @@
+##
+# As Locator 是为定位者或者定位程序提供的领域逻辑关注点。
+
 module Unidom::Geo::Concerns::AsLocator
 
   extend ActiveSupport::Concern
