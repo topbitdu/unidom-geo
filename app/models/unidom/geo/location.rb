@@ -39,4 +39,4 @@ class Unidom::Geo::Location < Unidom::Geo::ApplicationRecord
     locatings.located_is(located).valid_at(now: at).alive.exists?
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Geo::Location'
