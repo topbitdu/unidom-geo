@@ -29,4 +29,4 @@ class Unidom::Geo::Locating < Unidom::Geo::ApplicationRecord
     self.located_is(located).location_is(location).valid_at.alive.first_or_create! attributes
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Geo::Locating'
