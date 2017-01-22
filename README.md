@@ -81,3 +81,19 @@ The As Locator concern do the following tasks for the includer automatically:
 The As Region concern do the following tasks for the includer automatically:
 1. Define the has_many :locations macro as: ``has_many :locations, class_name: 'Unidom::Geo::Location'``
 2. Define the has_many :locatings macro as: ``has_many :locatings, through: :locations, source: :locatings``
+
+
+
+## Disable the Model & Migration
+
+If you only need the app components other than models, the migrations should be neglected, and the models should not be loaded.
+```ruby
+# config/initializers/unidom.rb
+Unidom::Common.configure do |options|
+
+  options[:neglected_namespaces] = %w{
+    Unidom::Geo
+  }
+
+end
+```
