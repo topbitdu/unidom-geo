@@ -11,7 +11,7 @@ module Unidom::Geo::Concerns::AsLocated
     has_many :locations, through:    :locatings,              source: :location
 
     ##
-    # 将地标与位置关联起来。如：
+    # 将当前位置与地标 to 关联起来。如：
     # location = Unidom::Geo::Location.first
     # shop.is_located! to: location, by: current_person
     def is_located!(to: nil, by: nil, at: Time.now)
