@@ -18,6 +18,10 @@ module Unidom::Geo::Concerns::AsLocated
       locatings.location_is(to).valid_at(now: at).alive.first_or_create! locator: by, opened_at: at
     end
 
+    ##
+    # 检查当前位置与地标 to 在指定的时间 at （缺省是当前时间）是否关联起来了。
+    # location = Unidom::Geo::Location.first
+    # 如： shop.is_located? to: location, at: Time.now
     def is_located?(to: nil, at: Time.now)
       locatings.location_is(to).valid_at(now: at).alive.exists?
     end
