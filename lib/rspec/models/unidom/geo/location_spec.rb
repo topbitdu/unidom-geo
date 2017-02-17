@@ -204,6 +204,11 @@ describe Unidom::Geo::Location, type: :model do
       { postal_code: 'A'*postal_code_max_length     } => 0,
       { postal_code: 'A'*(postal_code_max_length+1) } => 1
 
+    it_behaves_like 'scope', :postal_address_is, [
+      { attributes_collection: [ model_attributes ], count_diff: 1, args: [ 'Somewhere'  ] },
+      { attributes_collection: [ model_attributes ], count_diff: 0, args: [ 'Somewhere1' ] },
+      { attributes_collection: [ model_attributes ], count_diff: 0, args: [ 'somewhere'  ] } ]
+
   end
 
 end
