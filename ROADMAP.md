@@ -63,3 +63,7 @@
 
 ## v1.5.2
 1. Improve the Location spec for the postal_address_is scope
+
+## v1.5.3
+1. Improve the Location spec for the ``has_many :locatings, class_name: 'Unidom::Geo::Locating'`` macro
+2. Improve the Locating spec for the ``belongs_to :location, class_name: 'Unidom::Geo::Location'`` macro
