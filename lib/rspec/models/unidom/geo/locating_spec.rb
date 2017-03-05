@@ -33,6 +33,8 @@ describe Unidom::Geo::Locating, type: :model do
 
     it_behaves_like 'belongs_to', model_attributes, :location, Unidom::Geo::Location, location_attributes
 
+    it_behaves_like 'monomorphic scope', model_attributes, :location_is, :location
+
   end
 
 end
