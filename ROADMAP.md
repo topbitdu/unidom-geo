@@ -69,4 +69,4 @@
 2. Improve the Locating spec for the ``belongs_to :location, class_name: 'Unidom::Geo::Location'`` macro
 
 ## v1.5.4
-1. Improve the Locating spec for the location_is scope
+1. Improve the Locating spec for the ``location_is`` scope
