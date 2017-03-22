@@ -36,8 +36,10 @@ describe Unidom::Geo::Location, type: :model do
     it_behaves_like 'validates numericality', model_attributes, :maximum_longitude,
       range: -180..180, minimum_inclusive: true, maximum_inclusive: true, allow_blank: false
 
-    it_behaves_like 'validates text', model_attributes, :postal_address, length: 2..described_class.columns_hash['postal_address'].limit
-    it_behaves_like 'validates text', model_attributes, :postal_code,    length: 3..described_class.columns_hash['postal_code'].limit
+    it_behaves_like 'validates text', model_attributes, :postal_address,
+      length: 2..described_class.columns_hash['postal_address'].limit
+    it_behaves_like 'validates text', model_attributes, :postal_code,
+      length: 3..described_class.columns_hash['postal_code'].limit
 
     locating_1_attributes = {
       located_id:   SecureRandom.uuid,
