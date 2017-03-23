@@ -102,6 +102,8 @@ end
 
 ## RSpec examples
 
+### RSpec example manifest (run automatically)
+
 ```ruby
 # spec/models/unidom_spec.rb
 require 'unidom/geo/models_rspec'
@@ -111,4 +113,61 @@ require 'unidom/geo/types_rspec'
 
 # spec/validators/unidom_spec.rb
 require 'unidom/geo/validators_rspec'
+```
+
+### RSpec shared examples (to be integrated)
+
+```ruby
+# lib/unidom.rb
+def initialize_unidom
+
+  Unidom::Party::Shop.class_eval do
+    include Unidom::Geo::Concerns::AsLocated
+  end
+
+  Unidom::Geo::China::Region.class_eval do
+    include Unidom::Geo::Concerns::AsRegion
+  end
+
+end
+
+# spec/rails_helper.rb
+require 'unidom'
+initialize_unidom
+
+# spec/support/unidom_rspec_shared_examples.rb
+require 'unidom/geo/rspec_shared_examples'
+
+# spec/models/unidom/party/shop_spec.rb
+describe Unidom::Party::Shop, type: :model do
+
+  context do
+
+    model_attributes = {
+      name: 'Some Shop'
+    }
+
+    it_behaves_like 'Unidom::Geo::Concerns::AsLocated', model_attributes
+
+  end
+
+end
+
+# spec/models/unidom/geo/china/region_spec.rb
+describe Unidom::Geo::China::Region, type: :model do
+
+  context do
+
+    model_attributes = {
+      numeric_code: '999897',
+      name:         'Some Region',
+      scheme_id:    SecureRandom.uuid,
+      scheme_type:  'Unidom::Geo::China::Scheme::Mock'
+    }
+
+    it_behaves_like 'Unidom::Geo::Concerns::AsRegion', model_attributes
+
+  end
+
+end
 ```
