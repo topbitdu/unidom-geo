@@ -3,7 +3,8 @@
 
 module Unidom::Geo::Concerns::AsLocated
 
-  extend ActiveSupport::Concern
+  extend  ActiveSupport::Concern
+  include Unidom::Common::Concerns::ArgumentValidation
 
   included do |includer|
 
@@ -15,7 +16,13 @@ module Unidom::Geo::Concerns::AsLocated
     # location = Unidom::Geo::Location.first
     # shop.is_located! to: location, by: current_person
     def is_located!(to: nil, by: nil, at: Time.now)
+
+      assert_present! :to, to
+      assert_present! :by, by
+      assert_present! :at, at
+
       locatings.location_is(to).valid_at(now: at).alive.first_or_create! locator: by, opened_at: at
+
     end
 
     ##
@@ -23,7 +30,12 @@ module Unidom::Geo::Concerns::AsLocated
     # location = Unidom::Geo::Location.first
     # 如： shop.is_located? to: location, at: Time.now
     def is_located?(to: nil, at: Time.now)
+
+      assert_present! :to, to
+      assert_present! :at, at
+
       locatings.location_is(to).valid_at(now: at).alive.exists?
+
     end
 
   end
