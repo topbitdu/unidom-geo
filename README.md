@@ -147,7 +147,20 @@ describe Unidom::Party::Shop, type: :model do
       name: 'Some Shop'
     }
 
-    it_behaves_like 'Unidom::Geo::Concerns::AsLocated', model_attributes
+    location_attributes = {
+      postal_address: '#1 Some Street',
+      postal_code:    '610000',
+      region_id:      SecureRandom.uuid,
+      region_type:    'Unidom::Geo::Region::Mock'
+    }
+    location = Unidom::Geo::Location.create! location_attributes
+
+    locator_attributes = {
+      name: 'Tim'
+    }
+    locator = Unidom::Party::Person.create! locator_attributes
+
+    it_behaves_like 'Unidom::Geo::Concerns::AsLocated', model_attributes, location, locator
 
   end
 
