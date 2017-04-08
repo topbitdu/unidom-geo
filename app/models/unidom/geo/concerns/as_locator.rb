@@ -11,7 +11,13 @@ module Unidom::Geo::Concerns::AsLocator
     has_many :locations, through:    :locatings,              source: :location
 
     def locate!(it, to: nil, at: Time.now)
+
+      assert_present! :it, it
+      assert_present! :to, to
+      assert_present! :at, at
+
       locatings.location_is(to).located_is(it).valid_at(now: at).alive.first_or_create! opened_at: at
+
     end
 
   end
