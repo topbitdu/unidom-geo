@@ -121,6 +121,10 @@ require 'unidom/geo/validators_rspec'
 # lib/unidom.rb
 def initialize_unidom
 
+  Unidom::Party::Person.class_eval do
+    include Unidom::Geo::Concerns::AsLocator
+  end
+
   Unidom::Party::Shop.class_eval do
     include Unidom::Geo::Concerns::AsLocated
   end
@@ -137,6 +141,26 @@ initialize_unidom
 
 # spec/support/unidom_rspec_shared_examples.rb
 require 'unidom/geo/rspec_shared_examples'
+
+# spec/models/unidom/party/person_spec.rb
+describe Unidom::Party::Person, type: :model do
+
+  context do
+
+    model_attributes = {
+      name: 'Tim'
+    }
+
+    located_attributes = {
+      name: 'Walmart'
+    }
+    located = Unidom::Party::Shop.create! located_attributes
+
+    it_behaves_like 'Unidom::Geo::Concerns::AsLocator', model_attributes, located
+
+  end
+
+end
 
 # spec/models/unidom/party/shop_spec.rb
 describe Unidom::Party::Shop, type: :model do
