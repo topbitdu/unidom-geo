@@ -80,7 +80,7 @@
 3. RSpec shared examples manifest
 
 ## v1.5.7
-1. Improve the As Located concern for the argument validation
+1. Improved the As Located concern for the argument validation
 2. Improve the As Located shared examples for the #is_located! method, & the #is_located? method
 
 ## v1.5.8
