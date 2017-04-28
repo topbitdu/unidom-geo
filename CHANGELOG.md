@@ -84,5 +84,5 @@
 2. Improved the As Located shared examples for the #is_located! method, & the #is_located? method
 
 ## v1.5.8
-1. Improve the As Locator concern for the argument validations of the #locate! method
+1. Improved the As Locator concern for the argument validations of the #locate! method
 2. As Locator shared examples
