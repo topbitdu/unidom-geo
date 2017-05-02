@@ -59,7 +59,7 @@
 3. Validators RSpec examples manifest
 
 ## v1.5.1
-1. Improved the Location spec for the validations on the #``latitude`` attribute, the #``longitude`` attribute, the #``postal_address`` attribute, the #``postal_code`` attribute, the #``minimum_latitude`` attribute, the #``maximum_latitude`` attribute, the #``minimum_longitude`` attribute, & the #maximum_longitude attribute
+1. Improved the Location spec for the validations on the #``latitude`` attribute, the #``longitude`` attribute, the #``postal_address`` attribute, the #``postal_code`` attribute, the #``minimum_latitude`` attribute, the #``maximum_latitude`` attribute, the #``minimum_longitude`` attribute, & the #``maximum_longitude`` attribute
 
 ## v1.5.2
 1. Improved the Location spec for the postal_address_is scope
