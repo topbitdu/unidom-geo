@@ -72,7 +72,7 @@
 1. Improve the Locating spec for the ``location_is`` scope
 
 ## v1.5.5
-1. Improve the Location spec for the validations on the #``latitude`` attribute, the #longitude attribute, the #postal_address attribute, the #postal_code attribute, the #minimum_latitude attribute, the #maximum_latitude attribute, the #minimum_longitude attribute, & the #maximum_longitude attribute
+1. Improve the Location spec for the validations on the #``latitude`` attribute, the #``longitude`` attribute, the #postal_address attribute, the #postal_code attribute, the #minimum_latitude attribute, the #maximum_latitude attribute, the #minimum_longitude attribute, & the #maximum_longitude attribute
 
 ## v1.5.6
 1. As Located shared examples
