@@ -1,5 +1,5 @@
 module Unidom
   module Geo
-    VERSION = '1.5.8'.freeze
+    VERSION = '1.5.9'.freeze
   end
 end
