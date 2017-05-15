@@ -86,3 +86,7 @@
 ## v1.5.8
 1. Improved the As Locator concern for the argument validations of the #locate! method
 2. As Locator shared examples
+
+## v1.5.9
+1. Improve the Ruby Gem Specification to depend on unidom-common v1.10
+2. Improve the Location migration, & the Locating migration for the #opened_at column, & the #closed_at column
